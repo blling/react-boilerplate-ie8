@@ -12,8 +12,11 @@ module.exports = merge(webpackBaseConfig, {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        test: /\.css/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?-autoprefixer&modules=true&localIdentName=[local]!postcss-loader'
+        ),
       },
     ],
   },
