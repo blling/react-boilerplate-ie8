@@ -9,16 +9,19 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Layout from 'components/Layout';
 import HomePage from 'containers/HomePage/loadable';
-import FeaturePage from 'containers/FeaturePage/loadable';
+import CounterPage from 'containers/CounterPage/loadable';
 import NotFoundPage from 'containers/NotFoundPage/loadable';
 
 export default function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/features" component={FeaturePage} />
-      <Route path="" component={NotFoundPage} />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/counter" component={CounterPage} />
+        <Route path="" component={NotFoundPage} />
+      </Switch>
+    </Layout>
   );
 }

@@ -28,11 +28,9 @@ const MOUNT_NODE = document.getElementById('app');
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <div style={{ height: '100%' }}>
-        <Router>
-          <App />
-        </Router>
-      </div>
+      <Router>
+        <App />
+      </Router>
     </Provider>,
     MOUNT_NODE
   );
