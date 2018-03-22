@@ -43,13 +43,13 @@ const config = {
        * we need to exclude dependencies which are not intended for the browser
        * by listing them here.
        */
-      exclude: ['bootstrap'],
+      exclude: ['bootstrap', 'react-hot-loader'],
 
       /**
        * Specify any additional dependencies here. We include core-js and lodash
        * since a lot of our dependencies depend on them and they get picked up by webpack.
        */
-      include: ['eventsource-polyfill'],
+      include: [],
 
       // The path where the DLL manifest and bundle will get built
       path: 'node_modules/runtime-dlls',
