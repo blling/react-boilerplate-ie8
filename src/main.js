@@ -14,7 +14,6 @@ import { HashRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Load the favicon, the manifest.json file and the .htaccess file
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
-import 'file-loader?name=[name]!./.htaccess'; // eslint-disable-line import/extensions
 
 // Import root app
 import App from 'containers/App';

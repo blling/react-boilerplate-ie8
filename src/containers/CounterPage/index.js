@@ -12,11 +12,7 @@ import { makeSelectCount } from './selectors';
 
 export class CounterView extends React.PureComponent {
   render() {
-    return (
-      <div>
-        <Counter count={this.props.count} doubleAsync={this.props.doubleAsync} increment={this.props.increment} />;
-      </div>
-    );
+    return <Counter count={this.props.count} doubleAsync={this.props.doubleAsync} increment={this.props.increment} />;
   }
 }
 
