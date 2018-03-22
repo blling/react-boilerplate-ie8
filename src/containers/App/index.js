@@ -8,13 +8,14 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { hot } from 'react-hot-loader';
 
 import Layout from 'components/Layout';
 import HomePage from 'containers/HomePage/loadable';
 import CounterPage from 'containers/CounterPage/loadable';
 import NotFoundPage from 'containers/NotFoundPage/loadable';
 
-export default function App() {
+function App() {
   return (
     <Layout>
       <Switch>
@@ -25,3 +26,5 @@ export default function App() {
     </Layout>
   );
 }
+
+export default hot(module)(App);
