@@ -11,6 +11,10 @@ const baseLoaders = [
     include: config.srcDirFull,
   },
   {
+    test: /\.css$/,
+    loaders: ['style-loader', 'css-loader', 'postcss-loader'],
+  },
+  {
     test: /\.(png|jpg|gif)$/,
     loader: 'url-loader?limit=8192',
   },

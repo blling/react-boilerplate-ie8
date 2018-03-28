@@ -81,15 +81,6 @@ module.exports = merge(webpackBaseConfig, {
     filename: '[name].[hash].js',
   },
 
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-    ],
-  },
-
   plugins: dependencyHandlers().concat(plugins),
 
   performance: {

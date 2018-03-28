@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 const HashedModuleIdsPlugin = require('./plugins/HashedModuleIdsPlugin');
 
@@ -9,18 +8,6 @@ const config = require('../config');
 const webpackBaseConfig = require('./base.config');
 
 module.exports = merge(webpackBaseConfig, {
-  module: {
-    loaders: [
-      {
-        test: /\.css/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader?-autoprefixer&modules=true&localIdentName=[local]!postcss-loader'
-        ),
-      },
-    ],
-  },
-
   plugins: [
     /** Add UglifyJSPlugin */
     new UglifyJSPlugin({
@@ -48,8 +35,6 @@ module.exports = merge(webpackBaseConfig, {
       name: 'manifest',
       minChunks: Infinity,
     }),
-    /** Add ExtractTextPlugin */
-    new ExtractTextPlugin('[name].[contenthash:5].css'),
 
     /** Add HtmlWebpackPlugin */
     new HtmlWebpackPlugin({

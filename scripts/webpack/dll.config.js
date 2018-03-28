@@ -34,15 +34,6 @@ module.exports = merge.smartStrategy({ entry: 'replace' })(webpackBaseConfig, {
     library: '[name]',
   },
 
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-    ],
-  },
-
   plugins: [
     new webpack.DllPlugin({
       name: '[name]',
