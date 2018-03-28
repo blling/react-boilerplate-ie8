@@ -24,7 +24,7 @@ CounterView.propTypes = {
 
 const mapActionCreators = {
   increment: () => increment(1),
-  doubleAsync,
+  doubleAsync: (count) => doubleAsync(count),
 };
 
 const mapStateToProps = createStructuredSelector({

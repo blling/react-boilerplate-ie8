@@ -7,10 +7,10 @@ export function increment(value = 1) {
   };
 }
 
-export const doubleAsync = () => (dispatch, getState) =>
+export const doubleAsync = (count) => (dispatch) =>
   new Promise((resolve) => {
     setTimeout(() => {
-      dispatch(increment(getState().counter.count));
+      dispatch(increment(count));
       resolve();
     }, 200);
   });
