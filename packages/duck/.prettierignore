@@ -1,0 +1,11 @@
+dist
+node_modules
+coverage
+
+.git
+.cache
+
+src/others
+package.json
+jsconfig.json
+yarn.lock
